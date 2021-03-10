@@ -25,7 +25,7 @@ deploy:
   provide: heroku
   skip-cleanup: true
   keep-history: true
-  api_key: c03ced8e-4e84-43be-aa75-efd33152729b
+  api_key: XXXX
   app: mr-store-backend
   on:
     repo: MRJUANGAVIRIA/platzi-store-backend

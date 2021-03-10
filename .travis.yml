@@ -1,0 +1,31 @@
+language: node_js
+
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - '12'
+
+git:
+  depth: 3
+
+script:
+  - yarn test
+
+notifications:
+  email:
+    reciepients:
+      - juan.gaviria@kommit.co
+    on_success: always
+    on_failure: always
+
+deploy:
+  provide: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: c03ced8e-4e84-43be-aa75-efd33152729b
+  app: mr-store-backend
+  on:
+    repo: MRJUANGAVIRIA/platzi-store-backend
